@@ -12,8 +12,13 @@ if [ -z "$GH_TOKEN" ]; then
     exit 1
 fi
 
-if [ -z "$GH_REPO" ]; then
-    echo "Please provide your GH_REPO as an env var."
+if [ -z "$REPO_NAME" ]; then
+    echo "Please provide your REPO_NAME as an env var."
+    exit 1
+fi
+
+if [ -z "$REPO_OWNER" ]; then
+    echo "Please provide your REPO_OWNER as an env var."
     exit 1
 fi
 
@@ -22,8 +27,6 @@ if [ -z "$CLONE_DIR" ]; then
     exit 1
 fi
 
-apt -y update && apt -y upgrade && apt -y install gh
+apt -y update && apt -y upgrade && apt -y install git
 
-echo "$GH_TOKEN" | gh auth login --with-token
-
-gh repo clone $GH_REPO $CLONE_DIR
+git clone https://${GH_TOKEN}@github.com/${REPO_OWNER}/${REPO_NAME} $CLONE_DIR
