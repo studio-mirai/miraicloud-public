@@ -3,8 +3,8 @@ Description=sui-node
 After=network.target
 
 [Service]
-User=mirai
-Group=mirai
+User=miraicloud
+Group=miraicloud
 ExecStart=/opt/sui/bin/sui-node --config-path /opt/sui/config/config.yaml
 Restart=always
 RestartSec=5
