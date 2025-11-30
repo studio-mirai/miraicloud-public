@@ -1,4 +1,4 @@
-db-path: "/opt/sui/db"
+db-path: "/opt/sui/db/authorities_db"
 
 network-address: "/dns/localhost/tcp/8080/http"
 metrics-address: "0.0.0.0:9184"
