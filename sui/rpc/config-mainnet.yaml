@@ -5,6 +5,9 @@ metrics-address: "0.0.0.0:9184"
 json-rpc-address: "0.0.0.0:9000"
 enable-event-processing: true
 
+rpc:
+  enable-indexing: true
+
 p2p-config:
   listen-address: "0.0.0.0:8084"
   seed-peers:
@@ -33,12 +36,8 @@ genesis:
   genesis-file-location: "/opt/sui/config/genesis.blob"
 
 authority-store-pruning-config:
-  num-latest-epoch-dbs-to-retain: 5
-  epoch-db-pruning-period-secs: 3600
-  num-epochs-to-retain: 2
-  max-checkpoints-in-batch: 10
-  max-transactions-in-batch: 1000
-  pruning-run-delay-seconds: 60
+  num-epochs-to-retain: 14
+  num-epochs-to-retain-for-checkpoints: 14
 
 state-archive-read-config:
     - ingestion-url: "https://checkpoints.mainnet.sui.io"
