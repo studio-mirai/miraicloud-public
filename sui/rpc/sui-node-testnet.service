@@ -10,6 +10,7 @@ Restart=always
 RestartSec=5
 LimitNOFILE=65535
 CPUAffinity=10 26 11 27 12 28 13 29 14 30 15 31
+MemoryMax=64G
 
 [Install]
 WantedBy=multi-user.target
