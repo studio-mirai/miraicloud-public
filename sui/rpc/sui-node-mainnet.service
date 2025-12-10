@@ -9,7 +9,7 @@ ExecStart=/opt/sui/mainnet/bin/sui-node --config-path /opt/sui/mainnet/config/co
 Restart=always
 RestartSec=5
 LimitNOFILE=65535
-CPUAffinity=1 17 2 18 3 19 4 20 5 21 6 22 7 23 8 24
+CPUAffinity=2 18 3 19 4 20 5 21 6 22 7 23 8 24 9 25
 
 [Install]
 WantedBy=multi-user.target
