@@ -1,4 +1,4 @@
-db-path: "/opt/sui/db"
+db-path: "/opt/sui/mainnet/db"
 
 network-address: "/dns/localhost/tcp/8080/http"
 metrics-address: "0.0.0.0:9184"
@@ -33,7 +33,7 @@ p2p-config:
       peer-id: 13783584a90025b87d4604f1991252221e5fd88cab40001642f4b00111ae9b7e
 
 genesis:
-  genesis-file-location: "/opt/sui/config/genesis.blob"
+  genesis-file-location: "/opt/sui/mainnet/config/genesis.blob"
 
 authority-store-pruning-config:
   num-epochs-to-retain: 14
